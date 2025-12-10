@@ -15,6 +15,7 @@ int main() {
   float area1, area2;
   float pib1, pib2;
   int pt_turisticos1, pt_turisticos2;
+  float densi_popul1, densi_popul2, pib_percapita1, pib_percapita2; 
 
   // Área para entrada de dados (primeira carta)
 
@@ -34,6 +35,11 @@ int main() {
   printf("Digite o número de pontos turísticos \n");
   scanf("%d", &pt_turisticos1);
 
+  // Área para cálculos adicionais
+
+  densi_popul1 = populacao1 / area1;
+  pib_percapita1 = pib1 / populacao1;
+
   // Área para exibição dos dados da cidade (primeira carta)
   printf("\n");
   printf("Carta 1: \n");
@@ -41,9 +47,11 @@ int main() {
   printf("Código: %s \n", codigo1);
   printf("Nome da cidade: %s \n", nome1);
   printf("População: %.2f habitantes \n", populacao1);
-  printf("Área: %.2f km^2 \n", area1);
+  printf("Área: %.2f km² \n", area1);
   printf("PIB: %.2f milhões de reais \n", pib1);
-  printf("Número de pontos turísiticos: %d \n\n\n", pt_turisticos1);
+  printf("Número de pontos turísiticos: %d \n", pt_turisticos1);
+  printf("Densidade populacional: %.2f hab/Km² \n", densi_popul1);
+  printf("PIB per capita: %.2f milhões de reais/hab \n\n\n", pib_percapita1);
 
 
    // Área para entrada de dados (segunda carta)
@@ -64,6 +72,15 @@ int main() {
   printf("Digite o número de pontos turísticos \n");
   scanf("%d", &pt_turisticos2);
 
+  
+  // Área para cálculos adicionais
+
+  densi_popul2 = populacao2 / area2;
+  pib_percapita2 = pib2 / populacao2;
+
+
+  
+
   // Área para exibição dos dados da cidade (segunda carta)
 
   printf("\n");
@@ -75,6 +92,9 @@ int main() {
   printf("Área: %.2f km^2 \n", area2);
   printf("PIB: %.2f milhões de reais \n", pib2);
   printf("Número de pontos turísiticos: %d \n", pt_turisticos2);
+  printf("Densidade populacional: %.2f hab/km²\n", densi_popul1);
+  printf("PIB per capita: %.2f milhões de reais/hab \n\n\n", pib_percapita1);
+
 
 
 
