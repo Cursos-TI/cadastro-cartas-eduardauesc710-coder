@@ -102,17 +102,16 @@ int main() {
   printf("Superpoder: %.2f \n\n\n", superpoder2);
 
 
-// Área para comparação 
+// Área para comparação do atributo (população)
 
-printf("Comparação de cartas: \n");
-printf("População: Carta 1 venceu (%d) \n", populacao1 > populacao2);
-printf("Área: Carta 1 venceu (%d) \n", area1 > area2);
-printf("PIB: Carta 1 venceu (%d) \n", pib1 > pib2);
-printf("Número de pontos turísitcos: Carta 1 venceu (%d) \n", pt_turisticos1 > pt_turisticos2);
-printf("PIB per capita: Carta 1 venceu (%d) \n", pib_percapita1 > pib_percapita2); 
-printf("Densidade populacional: Carta 1 venceu (%d) \n", densi_popul1 < densi_popul2);
-printf("Super Poder: Carta 1 venceu (%d) \n", superpoder1 > superpoder2);
+printf("Carta 1 = %lu habitantes \n", populacao1);
+printf("Carta 2 = %lu habitantes \n", populacao2);
 
+if (populacao1 > populacao2){
+  printf("Carta 1 venceu!");
+} else {
+  printf("Carta 2 venceu!");
+}
 
 return 0;
 } 
