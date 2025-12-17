@@ -66,11 +66,12 @@ int main() {
   printf("3 - PIB \n");
   printf("4 - NÚMERO DE PONTOS TURÍSITCOS \n");
   printf("5 - DENSIDADE DEMOGRÁFICA \n");
-  scanf("%d", atributoescolhido);
+  scanf("%d", &atributoescolhido);
+  printf("\n \n");
 
   // Área para elaboração do Menu
 
-  printf("CIDADE 1 - %s | CIDADE 2 - %s \n", nome1, nome2);
+  printf("PAÍS 1 - %s | PAÍS 2 - %s \n", nome1, nome2);
   
   switch (atributoescolhido)
   {
@@ -82,35 +83,36 @@ int main() {
     {
       printf("CARTA 1 VENCEU \n");
     } else if(populacao2 > populacao1){
-      printf("CARTA 2 VEENCEU \n");
+      printf("CARTA 2 VENCEU \n");
     }else{
       printf("EMPATE");
     }
     break;
   case 2:
     printf("ATRIBUTO - ÁREA \n");
-    printf(" CARTA 1 - %f km² \n", area1);
-    printf(" CARTA 2 - %f km² \n", area2);
+    printf(" CARTA 1 - %.2f km² \n", area1);
+    printf(" CARTA 2 - %.2f km² \n", area2);
     if (area1 > area2)
     {
       printf("CARTA 1 VENCEU \n");
     } else if(area2 > area1){
-      printf("CARTA 2 VEENCEU \n");
+      printf("CARTA 2 VENCEU \n");
     }else{
       printf("EMPATE");
     }
     break;
   case 3:
     printf("ATRIBUTO - PIB \n");
-    printf(" CARTA 1 - %f trilhões de reais \n", pib1);
-    printf(" CARTA 2 - %f trilhões de reais \n", pib2);
+    printf(" CARTA 1 - %.2f trilhões de reais \n", pib1);
+    printf(" CARTA 2 - %.2f trilhões de reais \n", pib2);
     if (pib1 > pib2)
     {
       printf("CARTA 1 VENCEU \n");
     } else if(pib2 > pib1){
-      printf("CARTA 2 VEENCEU \n");
+      printf("CARTA 2 VENCEU \n");
     }else{
       printf("EMPATE");
+    }
     break;
   case 4:
     printf("ATRIBUTO - NÚMERO DE PONTOS TURÍSTICOS\n");
@@ -119,20 +121,21 @@ int main() {
     if (pt_turisticos1 > pt_turisticos2)
     {
       printf("CARTA 1 VENCEU \n");
-    } else if(pt_turisticos1 > pt_turisticos2){
-      printf("CARTA 2 VEENCEU \n");
+    } else if(pt_turisticos2 > pt_turisticos1){
+      printf("CARTA 2 VENCEU \n");
     }else{
       printf("EMPATE");
+    }
     break;
   case 5:
     printf("ATRIBUTO - DENSIDADE DEMOGRÁFICA \n");
-    printf(" CARTA 1 - %f hab/km² \n", densi_popul1);
-    printf(" CARTA 2 - %f hab/km² \n", densi_popul2);
+    printf(" CARTA 1 - %.2f hab/km² \n", densi_popul1);
+    printf(" CARTA 2 - %.2f hab/km² \n", densi_popul2);
     if (densi_popul1 < densi_popul2)
     {
       printf("CARTA 1 VENCEU \n");
     } else if(densi_popul1 > densi_popul2){
-      printf("CARTA 2 VEENCEU \n");
+      printf("CARTA 2 VENCEU \n");
     }else{
       printf("EMPATE");
     break;
@@ -140,9 +143,7 @@ int main() {
   default:
     printf("OPÇÃO INVÁLIDA \n");
     break;
-  }
 }
 
 return 0;
-
 }
